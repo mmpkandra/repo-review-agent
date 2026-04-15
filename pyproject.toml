@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-intelligence-agent"
+version = "0.1.0"
+description = "Generic repository intelligence agent with adaptive documentation generation."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "OpenAI Codex" }
+]
+dependencies = [
+  "boto3>=1.34.0",
+  "openai>=1.0.0",
+  "python-docx>=1.1.0",
+  "pyyaml>=6.0"
+]
+
+[project.scripts]
+repo-intel = "repo_intel_agent.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
