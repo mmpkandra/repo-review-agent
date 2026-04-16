@@ -1,9 +1,6 @@
 site_name: RunBook-AI
 site_description: Intelligent Repository Documentation Generator with Healthcare Compliance
 site_url: https://mmpkandra.github.io/repo-review-agent/
-repo_url: https://github.com/mmpkandra/repo-review-agent
-repo_name: mmpkandra/repo-review-agent
-edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -28,8 +25,6 @@ theme:
   icon:
     repo: fontawesome/brands/github
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - navigation.path
