@@ -1,0 +1,80 @@
+site_name: RunBook-AI
+site_description: Intelligent Repository Documentation Generator with Healthcare Compliance
+site_url: https://mmpkandra.github.io/repo-review-agent/
+repo_url: https://github.com/mmpkandra/repo-review-agent
+repo_name: mmpkandra/repo-review-agent
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation & Quick Start: quickstart.md
+  - Usage:
+      - Basic Usage: usage/basic.md
+      - Healthcare Mode: usage/healthcare.md
+      - AWS Bedrock: usage/bedrock.md
+  - Reference:
+      - CLI Options: reference/cli.md
+      - Compliance Scanning: reference/compliance.md
+      - Output Structure: reference/output.md
+  - Guides:
+      - Supported Repositories: guides/supported-repos.md
+      - Architecture: guides/architecture.md
+      - Extending RunBook-AI: guides/extending.md
+      - Cost Estimation: guides/cost.md
+
+plugins:
+  - search
